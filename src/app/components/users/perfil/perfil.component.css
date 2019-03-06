@@ -1,0 +1,21 @@
+.main-section {
+    border: 1px solid #A4A4A4;
+    background: #fff;
+  }
+  .profile-header {
+    background: #A4A4A4;
+    height: 100px;
+  }
+  .user-detail {
+    margin: -50px 0 30px 0;
+  }
+  
+  img {
+    height: 200px;
+    width: 200px;
+  }
+  .user-details h5 {
+    margin: 15px 0 5px 0;
+  }
+
+  
