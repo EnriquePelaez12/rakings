@@ -17,10 +17,10 @@ export class AuthService {
   registerUser(email: string, pass: string ){
     return new Promise((resolve, reject) => {
       this.afsAuth.auth.createUserWithEmailAndPassword(email, pass)
-      .then(userData => {
-        resolve(userData),
-        this.updateUserData(userData.user)//se asigna rol a usuario
-      }).catch(err => console.log(reject(err)))
+      .then(userData =>  resolve(userData),
+       err => reject(err));
+        // this.updateUserData(userData.user)//se asigna rol a usuario
+      //}).catch(err => console.log(reject(err)))
     });
   }
 
@@ -34,11 +34,7 @@ export class AuthService {
     })
 
   }
-  //metodo para abrir una ventana flotante y autenticarse con google
-  loginGoogleUser(){
-    return this.afsAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
-    .then(credential => this.updateUserData(credential.user))//se asigna su rol
-  }
+
   //metodo para salir
   logoutUser(){
     return this.afsAuth.auth.signOut();
@@ -56,10 +52,10 @@ export class AuthService {
     const data: UserInterface = {
       id: user.uid,
       email: user.email,
-      roles: {
+      /*roles: {
       // editor: true
        admin: true
-      }
+      }*/
     }
     return userRef.set(data, { merge: true})
   }

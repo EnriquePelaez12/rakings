@@ -9,7 +9,6 @@ import { AlumnoComponent } from './components/persona/alumno/alumno.component';
 import { PeleadorComponent } from './components/persona/peleador/peleador.component';
 import { GradosComponent } from './components/persona/grados/grados.component';
 import { RecordComponent } from './components/persona/record/record.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { Page404Component } from './components/page404/page404.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { PerfilComponent } from './components/users/perfil/perfil.component';
@@ -33,6 +32,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
+import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
+import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alumno.component';
 
 
 
@@ -45,12 +47,14 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     PeleadorComponent,
     GradosComponent,
     RecordComponent,
-    ModalComponent,
     Page404Component,
     LoginComponent,
     PerfilComponent,
     RegistroComponent,
-    ViewRecordComponent
+    ViewRecordComponent,
+    ViewAlumnoComponent,
+    DetailAlumnoComponent,
+    ModalAlumnoComponent
   ],
   imports: [
     BrowserModule,

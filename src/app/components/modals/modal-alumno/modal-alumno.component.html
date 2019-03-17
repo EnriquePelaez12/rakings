@@ -1,0 +1,86 @@
+<div class="modal fade" id="modalAlumno" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+              {{!this.dataApi.selectedAlumno.id ? 'Nuevo Alumno' : 'Actualizar Alumno'}}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="formAlumno" #formAlumno="ngForm" (ngSubmit)="onSaveAlumno(formAlumno)">
+            <input type="hidden" name="id"  [(ngModel)]="this.dataApi.selectedAlumno.id">
+           <!-- <input type="text" name="userUid" [value]="userUid">
+
+          
+
+          
+          -->
+  
+            <div class="form-group">
+              <label for="matricula" class="col-form-label">Matricula</label>
+              <input type="text" 
+              class="form-control" 
+              name="matricula" 
+              placeholder="Matricula"
+              [(ngModel)]="this.dataApi.selectedAlumno.matricula">
+            </div>
+
+            <div class="form-group">
+                <label for="nombreC" class="col-form-label">Nombre Completo</label>
+                <input type="text" 
+                class="form-control" 
+                name="nombreC" 
+                placeholder="Nombre Completo"
+                [(ngModel)]="this.dataApi.selectedAlumno.nombreC">
+              </div>
+
+              <div class="form-group">
+                  <label for="fNacimiento" class="col-form-label">Fecha de Nacimiento</label>
+                  <input type="text" 
+                  class="form-control" 
+                  name="fNacimiento" 
+                  placeholder="Fecha de Nacimiento"
+                  [(ngModel)]="this.dataApi.selectedAlumno.fNacimiento">
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion" class="col-form-label">Direccion</label>
+                    <input type="text" 
+                    class="form-control" 
+                    name="direccion" 
+                    placeholder="Direccion"
+                    [(ngModel)]="this.dataApi.selectedAlumno.direccion">
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="sexo" class="col-form-label">Sexo</label>
+                      <input type="text" 
+                      class="form-control" 
+                      name="sexo" 
+                      placeholder="Sexo"
+                      [(ngModel)]="this.dataApi.selectedAlumno.sexo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cel" class="col-form-label">Cel</label>
+                        <input type="text" 
+                        class="form-control" 
+                        name="cel" 
+                        placeholder="Cel"
+                        [(ngModel)]="this.dataApi.selectedAlumno.cel">
+                      </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" #btnClose 
+              data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

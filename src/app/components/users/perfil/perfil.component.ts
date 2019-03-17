@@ -16,7 +16,7 @@ export class PerfilComponent implements OnInit {
       name: '',
       email: '',
       photoUrl: '',
-      roles: {}
+     // roles: {}
     };
     
     public providerId: string = 'null'; 

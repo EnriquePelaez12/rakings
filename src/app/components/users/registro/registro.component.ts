@@ -66,15 +66,7 @@ export class RegistroComponent implements OnInit {
         {cssClass: 'alert-danger', timeout: 4000}) //para mostrar mensaje
       )};
 
-  
 
-  //entra con google
- /* onLoginGoogle(): void {
-    this.authService.loginGoogleUser()
-      .then((res) => {
-        this.onLoginRedirect();
-      }).catch(err => console.log('err', err.message));
-  }*/
   
   //metodo me manda a una ruta
   onLoginRedirect() {
