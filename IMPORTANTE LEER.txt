@@ -1,0 +1,8 @@
+instalar las siguientes dependencias para correcr el programa
+
+segundo curso angular 7
+
+npm i bootstrap jquery popper.js ngx-spinner -S   -->  instalacion de dependencias de nostrap jquery, se ejecuta dentro del proyecto.	
+npm i firebase @angular/fire --save               -->  instalacion de dos dependencias, firebase y angular fire2, sirve para hacer la conexion a firebase
+npm i font-awesome -S                             --> instalacion de dependencia de font-oso para iconos 
+npm install --save angular2-flash-messages        --> es para las notificaciones

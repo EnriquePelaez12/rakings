@@ -70,7 +70,7 @@ export class RegistroComponent implements OnInit {
   
   //metodo me manda a una ruta
   onLoginRedirect() {
-    this.router.navigate(['persona/alumno']);//si esta logueado se manda a esa direccion
+    this.router.navigate(['users/registro']);//si esta logueado se manda a esa direccion
 
   }
 

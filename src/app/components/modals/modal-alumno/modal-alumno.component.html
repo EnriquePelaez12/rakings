@@ -13,14 +13,9 @@
         <div class="modal-body">
           <form name="formAlumno" #formAlumno="ngForm" (ngSubmit)="onSaveAlumno(formAlumno)">
             <input type="hidden" name="id"  [(ngModel)]="this.dataApi.selectedAlumno.id">
-           <!-- <input type="text" name="userUid" [value]="userUid">
-
-          
-
-          
-          -->
-  
-            <div class="form-group">
+           <input type="text" name="userUid" [value]="userUid">
+           
+              <div class="form-group">
               <label for="matricula" class="col-form-label">Matricula</label>
               <input type="text" 
               class="form-control" 

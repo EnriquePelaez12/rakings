@@ -1,5 +1,5 @@
 export interface AlumnoInterface {
-   // userUid?: string;
+    userUid?: string;
     id?: string;
     matricula?: string;
     nombreC?: string;

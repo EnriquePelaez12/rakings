@@ -12,11 +12,11 @@ export class PerfilComponent implements OnInit {
   constructor(
     private authService: AuthService) { }
     //inicializamos  los atributos de la interfaz user
-    user: UserInterface = {
+    user: UserInterface ={
       name: '',
-      email: '',
-      photoUrl: '',
-     // roles: {}
+      email:'',
+      photoUrl:'',
+      roles: {}
     };
     
     public providerId: string = 'null'; 

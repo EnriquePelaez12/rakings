@@ -13,16 +13,17 @@ export class AuthService {
   constructor(
     private afsAuth: AngularFireAuth,
     private afs: AngularFirestore ) { }
+    
 //para registar usuarios
-  registerUser(email: string, pass: string ){
-    return new Promise((resolve, reject) => {
-      this.afsAuth.auth.createUserWithEmailAndPassword(email, pass)
-      .then(userData =>  resolve(userData),
-       err => reject(err));
-        // this.updateUserData(userData.user)//se asigna rol a usuario
-      //}).catch(err => console.log(reject(err)))
-    });
-  }
+registerUser(email: string, pass: string ){
+  return new Promise((resolve, reject) => {
+    this.afsAuth.auth.createUserWithEmailAndPassword(email, pass)
+    .then(userData => {
+      resolve(userData),
+      this.updateUserData(userData.user)//se asigna rol a usuario
+    }).catch(err => console.log(reject(err)))
+  });
+}
 
   //metodo para registrar por usuario y contraseña
   loginEmailUser(email: string, pass: string){
@@ -52,14 +53,14 @@ export class AuthService {
     const data: UserInterface = {
       id: user.uid,
       email: user.email,
-      /*roles: {
-      // editor: true
-       admin: true
-      }*/
+      roles: {
+       editor: true
+        // admin: true
+      }
     }
-    return userRef.set(data, { merge: true})
+    return userRef.set(data, { merge: true })//se guarda en la coleccion
   }
-  //nos devuelve el documento que corresponde al id
+  //nos devuelve el documento que corresponde al id de los roles
   isUSerAdmin(userUid){
     return this.afs.doc<UserInterface>(`users/${userUid}`).valueChanges();
   }
