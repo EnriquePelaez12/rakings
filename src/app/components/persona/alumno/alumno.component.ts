@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataApiService } from './../../../services/data-api.service';
 import { NgForm}  from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
-
+import { ToastrService } from 'ngx-toastr'; //para los mensajes de confitmacion
 
 
 @Component({
@@ -18,14 +18,15 @@ export class AlumnoComponent implements OnInit {
  
   constructor(   
     private dataApi: DataApiService,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private toastr: ToastrService) { }
  
     //propiedad como un arrive
-    private books: AlumnoInterface [];
+    private alumnos: AlumnoInterface[];
     public isAdmin: any = null;
     public userUid: string = null;
  
- private alumnos: AlumnoInterface[];
+
  ngOnInit() {
   this.getListAlumnos();
   this.getCurrentUser();
@@ -61,6 +62,7 @@ onDeleteAlumno(idAlumno: string): void{
   const confirmacion = confirm('¿Estas seguro de Eliminar?')
   if(confirmacion){
   this.dataApi.deleteAlumno(idAlumno);
+  this.mensajeDelete();
   }
 }
 
@@ -68,6 +70,10 @@ onPreUpdateAlumno(alumno: AlumnoInterface): void{
   console.log('ALUMNOOO', alumno)
   this.dataApi.selectedAlumno = Object.assign({}, alumno);
 
+}
+//mensaje para eliminar dato
+mensajeDelete() {
+  this.toastr.success('OPERACION EXITOSA!', 'ALUMNO SE A ELIMINADO!');
 }
 
 }

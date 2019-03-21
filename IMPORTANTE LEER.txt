@@ -6,3 +6,5 @@ npm i bootstrap jquery popper.js ngx-spinner -S   -->  instalacion de dependenci
 npm i firebase @angular/fire --save               -->  instalacion de dos dependencias, firebase y angular fire2, sirve para hacer la conexion a firebase
 npm i font-awesome -S                             --> instalacion de dependencia de font-oso para iconos 
 npm install --save angular2-flash-messages        --> es para las notificaciones
+npm install ngx-toastr --save                    --> espara las notificaciones
+npm install @angular/animations --save            --> complrmrnto de notificaciones

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+//componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +14,13 @@ import { LoginComponent } from './components/users/login/login.component';
 import { PerfilComponent } from './components/users/perfil/perfil.component';
 import { RegistroComponent } from './components/users/registro/registro.component';
 import { ViewRecordComponent } from './components/views/view-record/view-record.component';
+import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
+import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
+import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alumno.component';
+
+//animaciones para mensajes de confirmacion
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr';
 
 //para las notificaciones
 import { FlashMessagesModule } from 'angular2-flash-messages';
@@ -32,10 +39,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
-import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
-import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
-import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alumno.component';
-
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -63,9 +67,12 @@ import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alu
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [AngularFireAuth, AngularFirestore, FlashMessagesService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+       

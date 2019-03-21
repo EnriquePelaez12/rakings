@@ -19,9 +19,17 @@
               <label for="matricula" class="col-form-label">Matricula</label>
               <input type="text" 
               class="form-control" 
+              id="matricula"
               name="matricula" 
               placeholder="Matricula"
+              minlength="6"
+              maxlength="7"
+              required
               [(ngModel)]="this.dataApi.selectedAlumno.matricula">
+              <div >
+                <div >La Matricula es obligatoria</div>
+                <div >La Matricula debe tener 6 numeros</div>
+              </div>
             </div>
 
             <div class="form-group">
