@@ -8,3 +8,5 @@ npm i font-awesome -S                             --> instalacion de dependencia
 npm install --save angular2-flash-messages        --> es para las notificaciones
 npm install ngx-toastr --save                    --> espara las notificaciones
 npm install @angular/animations --save            --> complrmrnto de notificaciones
+
+hola hare un cambio desde un clon
