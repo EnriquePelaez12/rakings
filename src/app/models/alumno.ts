@@ -7,4 +7,25 @@ export interface AlumnoInterface {
     direccion?: string;
     sexo?: string;
     cel?: string;
+    apodo?: string;
+    grado?: string;
+    peso?: string;
+    salud?: string;
+    enlace?: string;
+    gano?: string;
+    perdio?: string;
+    empate?: string;
+    nombreProf?: string;
+    edadProf?: string;
+    sexoProf?: string;
+    direccionProf?: string;
+    enlaceProf?: string;
+    telefonoProf?: string;
+    especialidadProf?: string;
+    academia?: string;
+    gradoProf?: string;
+    tutor?: string;
+    direccionTutor?: string;
+    telefonoTutor?: string;
+
   }
