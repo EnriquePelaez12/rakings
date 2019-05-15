@@ -6,15 +6,20 @@
           <h5 class="modal-title" id="exampleModalLabel">
               {{!this.dataApi.selectedAlumno.id ? 'Nuevo Alumno' : 'Actualizar Alumno'}}
           </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"  (click)="resDoc(formAlumno)">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <form name="formAlumno" #formAlumno="ngForm" (ngSubmit)="onSaveAlumno(formAlumno)">
+              <div class="text-center">
+                <h4>Datos del Alumno</h4>
+                </div>
             <input type="hidden" name="id"  [(ngModel)]="this.dataApi.selectedAlumno.id">
-           <input type="text" name="userUid" [value]="userUid">
+           <input type="hidden" name="userUid" [value]="userUid">
            
+
+
               <div class="form-group">
               <label for="matricula" class="col-form-label">Matricula</label>
               <input type="text" 
@@ -22,13 +27,7 @@
               id="matricula"
               name="matricula" 
               placeholder="Matricula"
-              minlength="6"
-              maxlength="7"
-              required
               [(ngModel)]="this.dataApi.selectedAlumno.matricula">
-              <div >
-                <div >La Matricula es obligatoria</div>
-              </div>
             </div>
 
             <div class="form-group">
@@ -41,29 +40,125 @@
               </div>
 
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="fNacimiento" class="col-form-label">Fecha de Nacimiento</label>
-                  <input type="text" 
-                  class="form-control" 
-                  name="fNacimiento" 
-                  placeholder="Fecha de Nacimiento"
-                  [(ngModel)]="this.dataApi.selectedAlumno.fNacimiento">
+                <div class="form-group col-md-2">
+                  <label for="diaAlumno" class="col-form-label">Fecha de</label>
+                  <select
+                  class="custom-select"  size="1" 
+                  name="diaAlumno"
+                  [(ngModel)]="this.dataApi.selectedAlumno.diaAlumno" >
+                  <option value=""></option>
+                  <option value="1"> 1</option>
+                  <option value="2"> 2</option>
+                  <option value="3"> 3</option>
+                  <option value="4"> 4</option>
+                  <option value="5"> 5</option>
+                  <option value="6"> 6</option>
+                  <option value="7"> 7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  </select>
                 </div>
-                
-                <div class="form-group col-md-6">
-                  <label for="sexo" class="col-form-label">Sexo</label>
-                  <input type="text" 
+
+                <div class="form-group col-md-3">
+                  <label for="mesAlumno" class="col-form-label"> Nacimiento:</label>
+                  <select
+                  class="custom-select" size="1" 
+                  name="mesAlumno"
+                  [(ngModel)]="this.dataApi.selectedAlumno.mesAlumno">
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octubre">Octubre</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="yearAlumno" class="col-form-label">DD/MM/YY </label>
+                  <select
+                  class="custom-select" size="1" 
+                  name="yearAlumno"
+                  [(ngModel)]="this.dataApi.selectedAlumno.yearAlumno">
+                  <option value="1980">1980</option>
+                  <option value="1981">1981</option>
+                  <option value="1982">1982</option>
+                  <option value="1983">1983</option>
+                  <option value="1984">1984</option>
+                  <option value="1985">1985</option>
+                  <option value="1986">1986</option>
+                  <option value="1987">1987</option>
+                  <option value="1988">1988</option>
+                  <option value="1989">1989</option>
+                  <option value="1990">1990</option>
+                  <option value="1991">1991</option>
+                  <option value="1992">1992</option>
+                  <option value="1993">1993</option>
+                  <option value="1994">1994</option>
+                  <option value="1995">1995</option>
+                  <option value="1996">1996</option>
+                  <option value="1997">1997</option>
+                  <option value="1998">1998</option>
+                  <option value="1999">1999</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  </select>
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="sexo" class="col-form-label">Sexo:</label>
+                  <select 
                   class="form-control" 
-                  name="sexo" 
-                  placeholder="Sexo"
+                  name="sexo"
                   [(ngModel)]="this.dataApi.selectedAlumno.sexo">
+                  <option value="Masculino"> Masculino</option>
+                  <option value="Femenino"> Femenino</option>
+                  </select>
                 </div>
               </div>
 
-            
 
                 <div class="form-group">
-                    <label for="direccion" class="col-form-label">Direccion</label>
+                    <label for="direccion" class="col-form-label">Direccion:</label>
                     <input type="text" 
                     class="form-control" 
                     name="direccion" 
@@ -80,11 +175,14 @@
                     class="form-control" 
                     name="cel" 
                     placeholder="Cel"
+                    minlength="10"
+                    maxlength="10"
+                    required
                     [(ngModel)]="this.dataApi.selectedAlumno.cel">
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label for="apodo" class="col-form-label">apodo</label>
+                    <label for="apodo" class="col-form-label">Apodo</label>
                     <input type="text" 
                     class="form-control" 
                     name="apodo" 
@@ -96,27 +194,35 @@
                      
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="grado" class="col-form-label">grado</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="grado" 
-                        placeholder="grado"
+                        <label for="grado" class="col-form-label">Cinta</label>
+                        <select 
+                         name="grado"
+                         class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.grado">
+                        <option value="Amarilla">Amarilla</option>
+                        <option value="Naranja">Naranja</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Marron">Marron</option>
+                        <option value="Roja">Roja</option>
+                        <option value="Roji-Negra">Roji-Negra</option>
+                        <option value="Negra">Negra</option>
+                        </select>
                       </div>
 
                       <div class="form-group col-md-6">
-                        <label for="peso" class="col-form-label">peso</label>
+                        <label for="peso" class="col-form-label">Peso 0.0kg</label>
                         <input type="text" 
                         class="form-control" 
                         name="peso" 
-                        placeholder="peso"
+                        placeholder="0.0kg"
                         [(ngModel)]="this.dataApi.selectedAlumno.peso">
                       </div>
                     </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="salud" class="col-form-label">salud</label>
+                          <label for="salud" class="col-form-label">Salud</label>
                           <input type="text" 
                           class="form-control" 
                           name="salud" 
@@ -125,7 +231,7 @@
                         </div>
   
                         <div class="form-group col-md-6">
-                          <label for="enlace" class="col-form-label">enlace</label>
+                          <label for="enlace" class="col-form-label">Enlace</label>
                           <input type="text" 
                           class="form-control" 
                           name="enlace" 
@@ -136,39 +242,167 @@
 
                      <div class="form-row">
                       <div class="form-group col-md-4">
-                        <label for="gano" class="col-form-label">gano</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="gano" 
-                        placeholder="gano"
+                        <label for="gano" class="col-form-label">Victoria</label>
+                      <select 
+                      name="gano"
+                      class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.gano">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                      </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="perdio" class="col-form-label">perdio</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="perdio" 
-                        placeholder="perdio"
+                        <label for="perdio" class="col-form-label">Derrota</label>
+                        <select 
+                        name="perdio"
+                      class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.perdio">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                      </select>
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="empate" class="col-form-label">empate</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="empate" 
-                        placeholder="empate"
+                        <label for="empate" class="col-form-label">Empate</label>
+                        <select 
+                        name="empate"
+                      class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.empate">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                      </select>
                       </div>
                      </div>
 
                    <!--Datos del profesor-->
   
 
+                   <div class="text-center">
+                    <hr>
+                  <h4>Datos del Profesor</h4>
+                  <hr>
+                  </div>
 
                       <div class="form-group">
-                        <label for="nombreProf" class="col-form-label">Nombre Del Profesor</label>
+                        <label for="nombreProf" class="col-form-label">Nombre Completo</label>
                         <input type="text" 
                         class="form-control" 
                         name="nombreProf" 
@@ -178,26 +412,51 @@
   
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="edadProf" class="col-form-label">Edad del Profesor</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="edadProf" 
-                        placeholder="edadProf"
+                        <label for="edadProf" class="col-form-label">Edad</label>
+                        <select 
+                        name="edadProf"
+                      class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.edadProf">
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                      </select>
                       </div>
   
                       <div class="form-group col-md-6">
-                        <label for="sexoProf" class="col-form-label">Sexo profesor</label>
-                        <input type="text" 
+                        <label for="sexoProf" class="col-form-label">Sexo</label>
+                        <select 
                         class="form-control" 
-                        name="sexoProf" 
-                        placeholder="sexoProf"
-                        [(ngModel)]="this.dataApi.selectedAlumno.sexoProf">
+                        name="sexoProf"
+                         [(ngModel)]="this.dataApi.selectedAlumno.sexoProf">
+                          <option value="Masculino"> Masculino</option>
+                          <option value="Femenino"> Femenino</option>
+                        </select>
                       </div>
                      </div>
   
                       <div class="form-group">
-                        <label for="direccionProf" class="col-form-label">direccionProf</label>
+                        <label for="direccionProf" class="col-form-label">Direccion</label>
                         <input type="text" 
                         class="form-control" 
                         name="direccionProf" 
@@ -207,7 +466,7 @@
   
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="enlaceProf" class="col-form-label">enlaceProf</label>
+                        <label for="enlaceProf" class="col-form-label">Enlace</label>
                         <input type="text" 
                         class="form-control" 
                         name="enlaceProf" 
@@ -216,7 +475,7 @@
                       </div>
   
                       <div class="form-group col-md-6">
-                        <label for="telefonoProf" class="col-form-label">telefonoProf</label>
+                        <label for="telefonoProf" class="col-form-label">Celular</label>
                         <input type="text" 
                         class="form-control" 
                         name="telefonoProf" 
@@ -227,7 +486,7 @@
 
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="especialidadProf" class="col-form-label">especialidadProf</label>
+                        <label for="especialidadProf" class="col-form-label">Especialidad</label>
                         <input type="text" 
                         class="form-control" 
                         name="especialidadProf" 
@@ -236,17 +495,25 @@
                       </div>
 
                       <div class="form-group col-md-6">
-                        <label for="gradoProf" class="col-form-label">gradoProf</label>
-                        <input type="text" 
-                        class="form-control" 
-                        name="gradoProf" 
-                        placeholder="gradoProf"
+                        <label for="gradoProf" class="col-form-label">Cinta</label>
+                        <select 
+                         name="gradoProf"
+                         class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.gradoProf">
+                        <option value="Amarilla">Amarilla</option>
+                        <option value="Naranja">Naranja</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Marron">Marron</option>
+                        <option value="Roja">Roja</option>
+                        <option value="Roji-Negra">Roji-Negra</option>
+                        <option value="Negra">Negra</option>
+                        </select>
                       </div>
                      </div>
                      
                       <div class="form-group">
-                        <label for="academia" class="col-form-label">academia</label>
+                        <label for="academia" class="col-form-label">Nombre de la Academia</label>
                         <input type="text" 
                         class="form-control" 
                         name="academia" 
@@ -255,8 +522,12 @@
                       </div>
 
                       <!--Datos del Tutor -->
-                      <div class="form-group">
-                        <label for="tutor" class="col-form-label">tutor</label>
+                      <div>
+                        <hr>
+                      <h4>Datos del Tutor</h4>
+                      <hr>
+                      </div>                      <div class="form-group">
+                        <label for="tutor" class="col-form-label">Nombre Completo</label>
                         <input type="text" 
                         class="form-control" 
                         name="tutor" 
@@ -265,7 +536,7 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="direccionTutor" class="col-form-label">direccionTutor</label>
+                        <label for="direccionTutor" class="col-form-label">Dirección</label>
                         <input type="text" 
                         class="form-control" 
                         name="direccionTutor" 
@@ -274,7 +545,7 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="telefonoTutor" class="col-form-label">telefonoTutor</label>
+                        <label for="telefonoTutor" class="col-form-label">Celular</label>
                         <input type="text" 
                         class="form-control" 
                         name="telefonoTutor" 
@@ -287,8 +558,7 @@
 
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" #btnClose 
-              data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-secondary" #btnClose data-dismiss="modal" (click)="resDoc(formAlumno)">Cerrar</button>
               <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
           </form>

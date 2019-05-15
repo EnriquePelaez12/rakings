@@ -38,6 +38,11 @@ export class ModalAlumnoComponent implements OnInit {
     this.btnClose.nativeElement.click();
 
   }
+//metodo para resetear el formulario con el boton de close
+  resDoc( alumnoForm: NgForm): void{
+    alumnoForm.resetForm(); //para limpiar formulario
+  }
+
   mensajeSave() {
     this.toastr.success('CONFIRMACION!', 'ALUMNO SE GUARDO CON EXITO!');
   }
