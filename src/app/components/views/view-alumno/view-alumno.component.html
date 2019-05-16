@@ -6,20 +6,20 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Matricula</th>
-          <th scope="col">nombreC</th>
-          <th scope="col">fNacimiento</th>
-          <th scope="col">direccion</th>
-          <th scope="col">sexo</th>
-          <th scope="col">cel</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha de Nacimiento</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Cel</th>
           <th scope="col">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let alumno of alumnos; index as i">
           <th scope="row">{{i + 1}}</th>
-          <td>{{alumno.matricula}}</td>
+          <td routerLink="/alumno/{{alumno.id}}">{{alumno.matricula}}</td>
           <td>{{alumno.nombreC}}</td>
-          <td>{{alumno.fNacimiento}}</td>
+          <td>{{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}</td>
           <td>{{alumno.direccion}}</td>
           <td>{{alumno.sexo}}</td>
           <td>{{alumno.cel}}</td>

@@ -3,6 +3,7 @@ export interface AlumnoInterface {
     id?: string;
     matricula?: string;
     nombreC?: string;
+    edad?: string;
     diaAlumno?: string;
     mesAlumno?: string;
     yearAlumno?: string;

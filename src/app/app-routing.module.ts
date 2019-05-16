@@ -1,5 +1,4 @@
 import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
-import { ViewRecordComponent } from './components/views/view-record/view-record.component';
 import { PeleadorComponent } from './components/persona/peleador/peleador.component';
 import { AlumnoComponent } from './components/persona/alumno/alumno.component';
 import { Page404Component } from './components/page404/page404.component';
@@ -18,10 +17,9 @@ const routes: Routes = [
 
   {path: '', component: HomeComponent },
   {path: 'persona/alumno', component: AlumnoComponent, canActivate: [AuthGuard]},
-  {path: 'views/view-record', component: ViewRecordComponent},
   {path: 'views/view-alumno', component: ViewAlumnoComponent}, 
   {path: 'persona/grados', component: GradosComponent, canActivate: [AuthGuard]},
-  {path: 'persona/peleador', component: PeleadorComponent, canActivate: [AuthGuard]},
+  {path: 'persona/peleador', component: PeleadorComponent},
   {path: 'persona/record', component: RecordComponent, canActivate: [AuthGuard]},
   {path: 'alumno/:id', component: DetailAlumnoComponent},
   {path: 'users/login', component: LoginComponent, },

@@ -28,6 +28,7 @@ export class RegistroComponent implements OnInit {
   public email: string = '';
   public password: string = '';
 
+
   //propiedad
   uploadPercent: Observable<number>;
   urlImage: Observable<string>;

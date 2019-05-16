@@ -13,7 +13,6 @@ import { Page404Component } from './components/page404/page404.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { PerfilComponent } from './components/users/perfil/perfil.component';
 import { RegistroComponent } from './components/users/registro/registro.component';
-import { ViewRecordComponent } from './components/views/view-record/view-record.component';
 import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
 import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
 import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alumno.component';
@@ -55,7 +54,6 @@ import { from } from 'rxjs';
     LoginComponent,
     PerfilComponent,
     RegistroComponent,
-    ViewRecordComponent,
     ViewAlumnoComponent,
     DetailAlumnoComponent,
     ModalAlumnoComponent

@@ -1,77 +1,57 @@
 <section id="alumnos" class="row mt-5">
-  <div class="col" >
-      <a type="button" class="btn btn-outline-secondary float-right mb-3" 
-      data-toggle="modal" data-target="#modalAlumno">Nuevo Alumno
+  <div class="col">
+    <a type="button" class="btn btn-outline-secondary float-right mb-3" data-toggle="modal"
+      data-target="#modalAlumno">Nuevo Alumno
       <i class="fas fa-plus-circle"></i></a>
-      Adimistrador: {{isAdmin}}
-      <table class="table table-hover">
+    Adimistrador: {{isAdmin}}
+    <table class="table table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Matricula</th>
-          <th scope="col">nombreC</th>
-          <th scope="col">fNacimiento</th>
-          <th scope="col">direccion</th>
-          <th scope="col">sexo</th>
-          <th scope="col">cel</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">fecha de Nacimiento</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Cel</th>
           <th scope="col">&nbsp;</th>
           <th scope="col">&nbsp;</th>
-  
+
         </tr>
       </thead>
-      <tbody >
-        <tr  *ngFor="let alumno of alumnos; index as i">
+      <tbody>
+        <tr *ngFor="let alumno of alumnos; index as i">
           <th scope="row">{{i + 1}}</th>
-          <td routerLink="/alumno/{{alumno.id}}" >{{alumno.matricula}}</td>
+          <td routerLink="/alumno/{{alumno.id}}">{{alumno.matricula}}</td>
           <td>{{alumno.nombreC}}</td>
-          <td>{{alumno.fNacimiento}}</td>
+          <td>{{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}</td>
           <td>{{alumno.direccion}}</td>
           <td>{{alumno.sexo}}</td>
           <td>{{alumno.cel}}</td>
           <td *ngIf="alumno.userUid == userUid || isAdmin == true; else noOwner">
-            
-           <a type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalAlumno"
+
+            <a type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modalAlumno"
               (click)="onPreUpdateAlumno(alumno)">
-                  <i class="fas fa-edit"></i>
-                  </a>
-
-
-            <!--<button class="btn btn-block btn-primary" 
-            data-toggle="modal" data-target="#modalAlumno"
-            (click)="onPreUpdateAlumno(alumno)" >Actualizar</button>-->
-
-          </td>
-          <ng-template #noOwner>
-            <td>
-                <a type="button" class="btn btn-outline-secondary" disabled="true" >
-                    <i class="fas fa-edit"></i>
-                        </a>
-
-                        
-             <!--   <button class="btn btn-secondary" 
-              disabled="true" >Actualizar</button>     -->
-
-            </td>
-          </ng-template>
-
-          <td *ngIf="isAdmin == true; else noAdmin ">
-
-              <a class="btn btn-danger text-white" (click)="onDeleteAlumno(alumno.id)">
-                  <i class="fas fa-trash-alt"></i>         
-                  </a>
-            <!--  <button class="btn btn-block btn-danger" (click)="onDeleteAlumno(alumno.id)" >eliminar</button>-->
+              <i class="fas fa-edit"></i>
+            </a>
           </td>
           <ng-template #noAdmin>
             <td>
-                <a type="button" class="btn btn-outline-secondary" disabled="true">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                  <!--  <button class="btn btn-block btn-danger" disabled="true" >eliminar </button> -->           
+              <a type="button" class="btn btn-outline-secondary" disabled="true">
+                <i class="fas fa-edit"></i>
+              </a>
             </td>
           </ng-template>
+
+          <td *ngIf="alumno.userUid == userUid || isAdmin == true; else noOwner">
+
+            <a class="btn btn-danger text-white" (click)="onDeleteAlumno(alumno.id)">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
-<app-modal-alumno [userUid]="userUid" ></app-modal-alumno>
+<app-modal-alumno [userUid]="userUid"></app-modal-alumno>
