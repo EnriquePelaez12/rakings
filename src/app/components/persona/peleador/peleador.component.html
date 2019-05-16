@@ -1,12 +1,29 @@
-<p>
-  peleador works!
-</p>
-<p>
-  peleador works!
-</p><p>
-  peleador works!
-</p><p>
-  peleador works!
-</p><p>
-  peleador works!
-</p>
+<section id="alumnos" class="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let alumno of alumnos">
+        <div class="card_book">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>
+              </p>
+              <h4 routerLink="/alumno/{{alumno.id}}" class="card-title">{{alumno.nombreC}}</h4>
+              <p class="card-text">
+                {{alumno.direccion}}
+              </p>
+              <div class="container-precio-idioma">
+                <p class="badge badge-info">
+                  {{alumno.peso}}kg
+                </p>
+                <p class="badge badge-info">
+                  {{alumno.sexo}}
+                </p>
+              </div>
+              <a href="{{alumno.enlace}}" class="btn btn-block btn-primary" target="_blank">Enlaces</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

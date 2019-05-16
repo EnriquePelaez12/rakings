@@ -14,6 +14,7 @@ export interface AlumnoInterface {
     peso?: string;
     salud?: string;
     enlace?: string;
+    peleador?: string;
     gano?: string;
     perdio?: string;
     empate?: string;
