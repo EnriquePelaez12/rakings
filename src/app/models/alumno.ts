@@ -19,6 +19,7 @@ export interface AlumnoInterface {
     gano?: string;
     perdio?: string;
     empate?: string;
+    photoUrl?: string;
     nombreProf?: string;
     edadProf?: string;
     sexoProf?: string;

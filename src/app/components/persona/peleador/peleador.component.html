@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-body text-center">
               <p>
-                  <img class="img-fluid" src="assets/ledos.png" alt="{{alumno.nombreC}}" >
+                <img class="img-fluid" src="{{alumno.photoUrl}}"  >
               </p>
               <h5 routerLink="/alumno/{{alumno.id}}" class="card-title">{{alumno.nombreC}}</h5>
               <p class="">
@@ -30,7 +30,11 @@
                     {{alumno.gano}}-{{alumno.perdio}}-{{alumno.empate}}
                   </p>
                 </div>
-              <a href="{{alumno.enlace}}" class="btn btn-block btn-light" target="_blank">Enlaces</a>
+
+                <a class="btn btn-primary text-white" href="{{alumno.enlace}}">
+                  <i class="fab fa-facebook-f"></i>
+
+                </a>
             </div>
           </div>
         </div>
