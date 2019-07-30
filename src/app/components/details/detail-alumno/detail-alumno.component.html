@@ -1,96 +1,193 @@
-<section class="alumno" class="mt-5">
+<section class="alumno"  class="mt-3">
 
-  <div class="card">
-    <div class="card-body text-left">
-      <hr>
-      <h4>Datos del Alumno</h4>
-      <hr>
-      <p class="card-text">
-          Matricula: {{alumno.matricula}}
-      </p>
-      <p class="card-text">
-        Nombre: {{alumno.nombreC}}
-      </p>
-      <p class="card-text">
-        Fecha de Nacimiento: {{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}
-      </p>
-      <p class="card-text">
-        Direccion: {{alumno.direccion}}
-      </p>
-      <p class="card-text">
-        Sexo: {{alumno.sexo}}
-      </p>
-      <p class="card-text">
-        Cel: {{alumno.cel}}
-      </p>
-      <p class="card-text">
-        Apodo: {{alumno.apodo}}
-      </p>
-      <p class="card-text">
-        Grado: {{alumno.grado}}
-      </p>
-      <p class="card-text">
-        Peso: {{alumno.peso}}
-      </p>
-      <p class="card-text">
-        Problemas de Salud: {{alumno.salud}}
-      </p>
-      <p class="card-text">
-        enlace: {{alumno.enlace}}
-      </p>
-      <p class="card-text">
-        Victoria: {{alumno.gano}}
-      </p>
-      <p class="card-text">
-        Derota: {{alumno.perdio}}
-      </p>
-      <p class="card-text">
-        Empate: {{alumno.empate}}
-      </p>
-      <hr>
-      <h4>Datos del Profesor</h4>
-      <hr>
-      <p class="card-text">
-        nombreProf: {{alumno.nombreProf}}
-      </p>
-      <p class="card-text">
-        edadProf: {{alumno.edadProf}}
-      </p>
-      <p class="card-text">
-        sexoProf: {{alumno.sexoProf}}
-      </p>
-      <p class="card-text">
-        direccionProf: {{alumno.direccionProf}}
-      </p>
-      <p class="card-text">
-        enlaceProf: {{alumno.enlaceProf}}
-      </p>
-      <p class="card-text">
-        telefonoProf: {{alumno.telefonoProf}}
-      </p>
-      <p class="card-text">
-        especialidadProf: {{alumno.especialidadProf}}
-      </p>
-      <p class="card-text">
-        academia: {{alumno.academia}}
-      </p>
-      <p class="card-text">
-        gradoProf: {{alumno.gradoProf}}
-      </p>
-      <hr>
-      <h4>Datos del Tutor</h4>
-      <hr>
-      <p class="card-text">
-        tutor: {{alumno.tutor}}
-      </p>
-      <p class="card-text">
-        direccionTutor: {{alumno.direccionTutor}}
-      </p>
-      <p class="card-text">
-        telefonoTutor: {{alumno.telefonoTutor}}
-      </p>
+    <div class="card" >  
+      <h3>{{alumno.nombreC}}</h3>
+    
+        <div class="card_book   ">
+            <div class="card border-light mb-3">
+            <div class="card-body text-center border-light" >
+                <p>
+                  <img class="img-fluid" src="{{alumno.photoUrl}}"  >
+                </p>
+            </div> 
+            </div>
+        </div> 
+      </div>
 
 
-    </div>
+      <div class="card text-white bg-dark text-center mt-3" >
+        <h4>Detalles de Peleador</h4>
+      </div>
+
+
+<div class="izq" style="width: 34rem;">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+      <td> Matricula: {{alumno.matricula}}</td>
+      </tr>
+      <tr>
+        <td> Nombre: {{alumno.nombreC}}</td>
+      </tr>
+      <tr>
+        <td> Fecha de Nacimiento: {{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}</td>
+      </tr>
+      <tr>
+        <td>  Direccion: {{alumno.direccion}}</td>
+      </tr>
+      <tr>
+        <td>Sexo: {{alumno.sexo}}</td>
+      </tr>
+      <tr>
+        <td>Victoria: {{alumno.gano}}, Derota: {{alumno.perdio}}, Empate: {{alumno.empte}}</td>
+      </tr>   
+    </tbody>
+  </table>
+</div>
+
+<div class="cont" style="width: 34rem;">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td> Cel: {{alumno.cel}}</td>
+      </tr>
+      <tr>
+        <td>Apodo: {{alumno.apodo}}</td>
+      </tr>
+      <tr>
+        <td> Grado: {{alumno.grado}}</td>
+      </tr>
+      <tr>
+        <td>  Peso: {{alumno.peso}}</td>
+      </tr>
+      <tr>
+        <td> Problemas de Salud: {{alumno.salud}}</td>
+      </tr>
+      <tr>
+        <td>Enlace: 
+
+          <a class="btn btn-primary text-white" href="{{alumno.enlace}}">
+            <i class="fab fa-facebook-f"></i>
+
+          </a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+
+  <div class="card text-white bg-dark text-center mt-3" style="width: 70rem;" >
+    <h4>Datos del Tutor</h4>
+</div>
+  <div class="izq" style="width: 34rem;">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+        <td>Nombre: {{alumno.tutor}}</td>
+        </tr>
+        <tr>
+          <td>  Dirección: {{alumno.direccionTutor}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
   </div>
+  
+  <div class="cont" style="width: 34rem;">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Telefono: {{alumno.telefonoTutor}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  
+
+<section>
+  <div class="card text-white bg-dark text-center mt-3"  style="width: 70rem;">
+    <h4>Datos del Profesor</h4>
+  </div>
+  
 </section>
+
+<div class="izq" style="width: 34rem;">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+      <td>Nombre: {{alumno.nombreProf}}</td>
+      </tr>
+      <tr>
+        <td>Edad: {{alumno.edadProf}}</td>
+      </tr>
+      <tr>
+        <td>Sexo {{alumno.sexoProf}}</td>
+      </tr>
+      <tr>
+        <td>Dirección {{alumno.direccionProf}}</td>
+      </tr>
+      <tr>
+        <td>Enlaces:  <a class="btn btn-primary text-white" href="{{alumno.enlaceProf}}">
+          <i class="fab fa-facebook-f"></i>
+
+        </a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="cont" style="width: 34rem;">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td> Telefono: {{alumno.telefonoProf}}</td>
+      </tr>
+      <tr>
+        <td>Especialidad: {{alumno.especialidadProf}}</td>
+      </tr>
+      <tr>
+        <td>Academia: {{alumno.academia}}</td>
+      </tr>
+      <tr>
+        <td>Grado: {{alumno.gradoProf}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+      
+
+     
+
+
+
+<!-- class="card border-secondary mb-3" style="max-width: 50rem;" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

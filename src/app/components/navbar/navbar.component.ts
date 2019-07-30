@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
    ) { }
 
    //propiedades
-   public app_name: string = 'Raiking Amateur Mexico';
+   public app_name: string = 'Ranking Ledos Team';
    public isLogged: boolean = false;
    public isAdmin: any = null;
     public userUid: string = null;

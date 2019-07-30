@@ -39,6 +39,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { from } from 'rxjs';
+import { DetailPeleadorComponent } from './components/details/detail-peleador/detail-peleador.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { from } from 'rxjs';
     RegistroComponent,
     ViewAlumnoComponent,
     DetailAlumnoComponent,
-    ModalAlumnoComponent
+    ModalAlumnoComponent,
+    DetailPeleadorComponent
   ],
   imports: [
     BrowserModule,

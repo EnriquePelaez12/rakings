@@ -12,6 +12,7 @@ import { RecordComponent } from './components/persona/record/record.component';
 import { GradosComponent } from './components/persona/grados/grados.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
+//import { DetailPeleadorComponent } from './components/details/detail-peleador/detail-peleador.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'persona/peleador', component: PeleadorComponent},
   {path: 'persona/record', component: RecordComponent, canActivate: [AuthGuard]},
   {path: 'alumno/:id', component: DetailAlumnoComponent},
+  //{path: 'peleador/:id', component: DetailPeleadorComponent},
   {path: 'users/login', component: LoginComponent, },
   {path: 'users/registro', component: RegistroComponent, canActivate: [AuthGuard]},
   {path: 'users/perfil', component: PerfilComponent, canActivate: [AuthGuard] },

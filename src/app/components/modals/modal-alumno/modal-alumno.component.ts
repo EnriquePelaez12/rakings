@@ -54,6 +54,7 @@ onUpload(e){
     //update  
     this.dataApi.updateAlumno(alumnoForm.value);
     this.mensajeUpdate();
+    
     }
     alumnoForm.resetForm();
     this.btnClose.nativeElement.click();
