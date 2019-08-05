@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-alumno.component.css']
 })
 export class ViewAlumnoComponent implements OnInit {
+  public loading: boolean;
 
-  constructor(private dataApi: DataApiService) { }
+  constructor(private dataApi: DataApiService) {
+    this.loading = true;
+   }
   public alumnos= [];
   public alumno= '';
 
@@ -17,6 +20,7 @@ export class ViewAlumnoComponent implements OnInit {
     this.dataApi.getAllAlumno().subscribe(alumnos => {
       console.log('Alumnos', alumnos);
       this.alumnos = alumnos;
+      this.loading = false;
     })
   }
 

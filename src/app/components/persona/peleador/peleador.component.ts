@@ -7,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./peleador.component.css']
 })
 export class PeleadorComponent implements OnInit {
+  public loading: boolean;
 
-  constructor(private dataApi: DataApiService) { }
+  constructor(private dataApi: DataApiService) { 
+    this.loading = true;}
+
    private alumnos: AlumnoInterface[];
   ngOnInit() {
     this.getPeleadores();
     console.log('ES PELEADOR:', this.alumnos)
+   
   }
 
   getPeleadores(){
     this.dataApi.getAllPeleadores().subscribe(peleadores => this.alumnos = peleadores);
+    this.loading = false;
+
   }
 }

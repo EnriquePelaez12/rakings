@@ -1,13 +1,21 @@
-<section id="alumnos" class="mt-5">
+<div class="loading" *ngIf="loading">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+</div>
+<section id="alumnos"class="mt-5" *ngIf="alumnos">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let alumno of alumnos">
         <div class="card_book">
           <div class="card">
-            <div class="card-body text-center">
+            <div class="card-body text-center" >
               <p>
                 <img class="img-fluid" src="{{alumno.photoUrl}}"  >
               </p>
+
               <h5 routerLink="/peleador/{{alumno.id}}" class="card-title">{{alumno.nombreC}}</h5>
               <p class="">
                 {{alumno.direccion}}
@@ -41,6 +49,7 @@
       </div>
     </div>
   </div>
-
-  
+<br><br><br><br><br><br><br><br><br><br><br>
 </section> 
+
+

@@ -42,6 +42,7 @@ import { DetailPeleadorComponent } from './components/details/detail-peleador/de
 import { ContactoComponent } from './components/persona/contacto/contacto.component';
 import { DetailContactoComponent } from './components/details/detail-contacto/detail-contacto.component';
 import { ListContactoComponent } from './components/persona/list-contacto/list-contacto.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ListContactoComponent } from './components/persona/list-contacto/list-c
     DetailPeleadorComponent,
     ContactoComponent,
     DetailContactoComponent,
-    ListContactoComponent
+    ListContactoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,10 +9,12 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./list-contacto.component.css']
 })
 export class ListContactoComponent implements OnInit {
-
+  public loading: boolean;
   
   constructor(private dataApi: ApiContactoService,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService) {
+      this.loading = true;
+     }
   private contactos: ContactoInterface[];
 
   ngOnInit() {
@@ -22,6 +24,7 @@ export class ListContactoComponent implements OnInit {
 getListContactos(){
   this.dataApi.getAllContactos().subscribe(contactos => {
     this.contactos = contactos;
+    this.loading = false;
     });
 }
 onDeleteContacto(idContacto: string): void{

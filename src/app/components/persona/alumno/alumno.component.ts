@@ -14,12 +14,14 @@ import { ToastrService } from 'ngx-toastr'; //para los mensajes de confitmacion
   styleUrls: ['./alumno.component.css']
 })
 export class AlumnoComponent implements OnInit {
-
+  public loading: boolean;
  
   constructor(   
     private dataApi: DataApiService,
     private authService: AuthService,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService) { 
+      this.loading = true;
+    }
  
     //propiedad como un arrive
     private alumnos: AlumnoInterface[];
@@ -54,6 +56,7 @@ export class AlumnoComponent implements OnInit {
     .subscribe(alumnos => {
       //console.log('Alumnos', alumnos);
       this.alumnos = alumnos;
+      this.loading = false;
     });
   }
 
