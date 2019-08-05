@@ -17,7 +17,7 @@
       <tbody>
         <tr *ngFor="let alumno of alumnos; index as i">
           <th scope="row">{{i + 1}}</th>
-          <td routerLink="/alumno/{{alumno.id}}">{{alumno.matricula}}</td>
+          <td routerLink="/peleador/{{alumno.id}}">{{alumno.matricula}}</td>
           <td>{{alumno.nombreC}}</td>
           <td>{{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}</td>
           <td>{{alumno.direccion}}</td>

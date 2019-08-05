@@ -7,8 +7,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AlumnoComponent } from './components/persona/alumno/alumno.component';
 import { PeleadorComponent } from './components/persona/peleador/peleador.component';
-import { GradosComponent } from './components/persona/grados/grados.component';
-import { RecordComponent } from './components/persona/record/record.component';
 import { Page404Component } from './components/page404/page404.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { PerfilComponent } from './components/users/perfil/perfil.component';
@@ -16,6 +14,7 @@ import { RegistroComponent } from './components/users/registro/registro.componen
 import { ViewAlumnoComponent } from './components/views/view-alumno/view-alumno.component';
 import { DetailAlumnoComponent } from './components/details/detail-alumno/detail-alumno.component';
 import { ModalAlumnoComponent } from './components/modals/modal-alumno/modal-alumno.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //animaciones para mensajes de confirmacion
 import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,6 +39,9 @@ import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { from } from 'rxjs';
 import { DetailPeleadorComponent } from './components/details/detail-peleador/detail-peleador.component';
+import { ContactoComponent } from './components/persona/contacto/contacto.component';
+import { DetailContactoComponent } from './components/details/detail-contacto/detail-contacto.component';
+import { ListContactoComponent } from './components/persona/list-contacto/list-contacto.component';
 
 
 @NgModule({
@@ -49,8 +51,6 @@ import { DetailPeleadorComponent } from './components/details/detail-peleador/de
     NavbarComponent,
     AlumnoComponent,
     PeleadorComponent,
-    GradosComponent,
-    RecordComponent,
     Page404Component,
     LoginComponent,
     PerfilComponent,
@@ -58,12 +58,16 @@ import { DetailPeleadorComponent } from './components/details/detail-peleador/de
     ViewAlumnoComponent,
     DetailAlumnoComponent,
     ModalAlumnoComponent,
-    DetailPeleadorComponent
+    DetailPeleadorComponent,
+    ContactoComponent,
+    DetailContactoComponent,
+    ListContactoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,

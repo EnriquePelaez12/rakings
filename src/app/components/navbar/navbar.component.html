@@ -24,6 +24,9 @@
       <li class="nav-item" *ngIf="isLogged">
         <a class="nav-link" routerLink="/persona/alumno">Alumno</a>
       </li>
+      <li class="nav-item" *ngIf="isAdmin == true ">
+        <a class="nav-link" routerLink="/persona/list-contacto">Mensajes</a>
+      </li>
       <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" routerLink="/persona/peleador">Peleador</a>
       </li>
@@ -31,8 +34,12 @@
         <a class="nav-link" routerLink="/views/view-alumno">Alumno</a>
       </li>
       <li class="nav-item" *ngIf="!isLogged">
+        <a class="nav-link" routerLink="/persona/contacto">Contacto</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" routerLink="/users/login">Login</a>
       </li>
+      
       <li class="nav-item" *ngIf="isLogged">
         <a href="#" class="nav-link" (click)="onLogout()">Salir
         </a>
