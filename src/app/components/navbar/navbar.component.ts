@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { UserInterface } from '../../models/user';
 
 @Component({
   selector: 'app-navbar',
@@ -14,16 +15,33 @@ export class NavbarComponent implements OnInit {
     private afsAuth: AngularFireAuth
    ) { }
 
+   user: UserInterface ={
+    name: '',
+    email:'',
+    photoUrl:'',
+    roles: {}
+  };
+
    //propiedades
    public app_name: string = 'Ranking Ledos Team';
    public isLogged: boolean = false;
    public isAdmin: any = null;
     public userUid: string = null;
 
- 
+    public providerId: string = 'null'; 
    ngOnInit() {
     this.getCurrentUser();
     this.getCurrentUsers();
+
+     //se comprueba si el usuario esta logado
+     this.authService.isAuth().subscribe(user =>{
+      if (user){
+        this.user.name = user.displayName;
+        this.user.email = user.email;
+        this.user.photoUrl = user.photoURL;
+        this.providerId = user.providerData[0].providerId;
+      }
+    })
     
 
   }

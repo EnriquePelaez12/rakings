@@ -43,6 +43,7 @@ import { ContactoComponent } from './components/persona/contacto/contacto.compon
 import { DetailContactoComponent } from './components/details/detail-contacto/detail-contacto.component';
 import { ListContactoComponent } from './components/persona/list-contacto/list-contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SubNavComponent } from './components/sub-nav/sub-nav.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { FooterComponent } from './components/footer/footer.component';
     DetailContactoComponent,
     ListContactoComponent,
     FooterComponent,
+    SubNavComponent,
   ],
   imports: [
     BrowserModule,
