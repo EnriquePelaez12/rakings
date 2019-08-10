@@ -3,10 +3,10 @@ import { DataApiService } from './../../../services/data-api.service';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { Component, OnInit,  ViewChild, ElementRef, Input } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr'; //para los mensajes de confitmacion
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { finalize } from 'rxjs/operators';
+import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-alumno',
@@ -15,9 +15,13 @@ import { finalize } from 'rxjs/operators';
 })
 export class ModalAlumnoComponent implements OnInit {
 
+  contacto: FormGroup;
+  submitted = false;
+
   constructor(
     private dataApi: DataApiService,
     private toastr: ToastrService,
+    private formBuilder: FormBuilder,
     private storage: AngularFireStorage
     ) { }
   @ViewChild('btnClose') btnClose: ElementRef; //para cerrar el modal al momento de guardar
@@ -27,7 +31,29 @@ uploadPercent: Observable<number>;//para saber el porcentaje de carga de la imag
 photoUrl: Observable<string>;//recupera la url de la imagen
 
   ngOnInit() {
+  //   this.contacto = this.formBuilder.group({
+  //     matricula: ['', Validators.required],
+  //     nombreC: ['', Validators.required],            
+  //     direccion: ['', Validators.required],
+  //     cel: ['', Validators.required],
+  //     apodo: ['', Validators.required],
+  //     peso: ['', Validators.required],
+  //     salud: ['', Validators.required],
+  //     enlace: ['', Validators.required],
+  //     nombreProf: ['', Validators.required],
+  //     direccionProf: ['', Validators.required],
+  //     enlaceProf: ['', Validators.required],
+  //     telefonoProf: ['', Validators.required],
+  //     especialidadProf: ['', Validators.required],
+  //     academia: ['', Validators.required],
+  //     tutor: ['', Validators.required],
+  //     direccionTutor: ['', Validators.required],
+  //     telefonoTutor: ['', Validators.required],
+  // });
   }
+
+  // get f() { return this.contacto.controls; }
+
   
 //para subir la imagen
 onUpload(e){
@@ -45,21 +71,39 @@ onUpload(e){
 
   onSaveAlumno(alumnoForm: NgForm): void{
    // console.log('alumnForm.value.id', alumnForm.value.id)
-    if(alumnoForm.value.id == null){
-    //new 
-    alumnoForm.value.userUid = this.userUid;//te guarda el id del usuario que creo el documento
+   if (alumnoForm.value.id == null) {
+ 
+    alumnoForm.value.userUid = this.userUid;
     this.dataApi.addAlumno(alumnoForm.value);
-    this.mensajeSave();
-    }else{
+     this.mensajeSave();
+     alumnoForm.resetForm();
+  }else{
     //update  
     this.dataApi.updateAlumno(alumnoForm.value);
     this.mensajeUpdate();
-    
     }
     alumnoForm.resetForm();
     this.btnClose.nativeElement.click();
 
   }
+
+
+  // onSaveContacto(contactoForm: NgForm): void{
+  
+  //   if (contactoForm.value.id == null) {
+  //     this.submitted = true;
+  //      this.dataApi.addContacto(contactoForm.value);
+  //      this.mensajeSave();
+  //     contactoForm.resetForm();
+  //     this.onLoginRedirect();
+  //   }
+  //   if (this.contacto.invalid) {
+  //     return;
+  // }
+  
+  // }
+
+
 //metodo para resetear el formulario con el boton de close
   resDoc( alumnoForm: NgForm): void{
     alumnoForm.resetForm(); //para limpiar formulario

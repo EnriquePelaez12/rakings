@@ -1,39 +1,51 @@
-<section id="alumnos" class="row mt-5">
-    <div class="col">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-              <th scope="col">N°</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">correo</th>
-            <th scope="col">Aunto</th>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let contacto of contactos; index as i">
-            <th scope="row">{{i + 1}}</th>
-            <td routerLink="/contacto/{{contacto.id}}">{{contacto.nombre}}</td>
-            <td>{{contacto.email}}</td>
-            <td>{{contacto.asunto}}</td>
-            <td>
-              <a class="btn btn-danger text-white" (click)="onDeleteContacto(contacto.id)">
-                <i class="fas fa-trash-alt"></i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="loading" *ngIf="loading">
-          <div class="d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+<div class="container">
+    <div class="abs-center">
+       <div class="col-md-12">
+
+        
+          <section id="alumnos" class="row mt-5">
+              <div class="col">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">correo</th>
+                      <th scope="col">Aunto</th>
+                      <th scope="col">&nbsp;</th>
+                      <th scope="col">&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let contacto of contactos; index as i">
+                      <th scope="row">{{i + 1}}</th>
+                      <td routerLink="/contacto/{{contacto.id}}">{{contacto.nombre}}</td>
+                      <td>{{contacto.email}}</td>
+                      <td>{{contacto.asunto}}</td>
+                      <td>
+                        <a class="btn btn-danger text-white" (click)="onDeleteContacto(contacto.id)">
+                          <i class="fas fa-trash-alt"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="loading" *ngIf="loading">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                </div>
               </div>
-            </div>
+              <br><br><br><br> <br><br><br><br><br><br><br>
+              <br><br><br><br> <br><br><br><br><br><br><br>
+          
+            </section>
+          
+       </div>
+
+
+
       </div>
     </div>
-    <br><br><br><br> <br><br><br><br><br><br><br>
-    <br><br><br><br> <br><br><br><br><br><br><br>
-
-  </section>
