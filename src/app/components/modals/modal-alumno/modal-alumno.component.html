@@ -20,7 +20,7 @@
            
 
                 <div class="form-group">
-                  <label for="matricula" class="col-form-label">Matricula</label>
+                  <label for="matricula" class="col-form-label">Matricula:</label>
                   <input type="text" 
                   class="form-control" 
                   id="matricula"
@@ -30,7 +30,7 @@
                 </div>
 
             <div class="form-group">
-                <label for="nombreC" class="col-form-label">Nombre Completo</label>
+                <label for="nombreC" class="col-form-label">Nombre Completo:</label>
                 <input type="text" 
                 class="form-control" 
                 name="nombreC" 
@@ -39,7 +39,7 @@
               </div>
               <div class="form-row">
                   <div class="form-group col-md-6">
-                      <label for="edad" class="col-form-label">Edad</label>
+                      <label for="edad" class="col-form-label">Edad:</label>
                       <select 
                       name="edad"
                     class="custom-select" size="1" 
@@ -86,7 +86,7 @@
                     </div>
 
                   <div class="form-group col-md-6">
-                      <label for="peleador" class="col-form-label">Peleador</label>
+                      <label for="peleador" class="col-form-label">Peleador:</label>
                       <select name="peleador" 
                       class="form-control" 
                       [(ngModel)]="this.dataApi.selectedAlumno.peleador">
@@ -214,11 +214,11 @@
 
 
                 <div class="form-group">
-                    <label for="direccion" class="col-form-label">Direccion:</label>
+                    <label for="direccion" class="col-form-label">Dirección:</label>
                     <input type="text" 
                     class="form-control" 
                     name="direccion" 
-                    placeholder="Direccion"
+                    placeholder="Dirección"
                     [(ngModel)]="this.dataApi.selectedAlumno.direccion">
                   </div>
                 
@@ -226,11 +226,11 @@
 
                  <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="cel" class="col-form-label">Cel</label>
+                    <label for="cel" class="col-form-label">Celular:</label>
                     <input type="text" 
                     class="form-control" 
                     name="cel" 
-                    placeholder="Cel"
+                    placeholder="Celular"
                     minlength="10"
                     maxlength="10"
                     required
@@ -238,11 +238,11 @@
                   </div>
 
                   <div class="form-group col-md-6">
-                    <label for="apodo" class="col-form-label">Apodo</label>
+                    <label for="apodo" class="col-form-label">Apodo:</label>
                     <input type="text" 
                     class="form-control" 
                     name="apodo" 
-                    placeholder="apodo"
+                    placeholder="Apodo"
                     [(ngModel)]="this.dataApi.selectedAlumno.apodo">
                   </div>
                  </div>
@@ -250,7 +250,7 @@
                      
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="grado" class="col-form-label">Cinta</label>
+                        <label for="grado" class="col-form-label">Cinta:</label>
                         <select 
                          name="grado"
                          class="custom-select" size="1" 
@@ -271,34 +271,34 @@
                         <input type="text" 
                         class="form-control" 
                         name="peso" 
-                        placeholder="0.0kg"
+                        placeholder="0.0 kg"
                         [(ngModel)]="this.dataApi.selectedAlumno.peso">
                       </div>
                     </div>
 
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="salud" class="col-form-label">Salud</label>
+                          <label for="salud" class="col-form-label">Estado de Salud:</label>
                           <input type="text" 
                           class="form-control" 
                           name="salud" 
-                          placeholder="salud"
+                          placeholder="Estado De Salud"
                           [(ngModel)]="this.dataApi.selectedAlumno.salud">
                         </div>
   
                         <div class="form-group col-md-6">
-                          <label for="enlace" class="col-form-label">Enlace</label>
+                          <label for="enlace" class="col-form-label">Enlace:</label>
                           <input type="text" 
                           class="form-control" 
                           name="enlace" 
-                          placeholder="enlace"
+                          placeholder="Enlace"
                           [(ngModel)]="this.dataApi.selectedAlumno.enlace">
                         </div>
                       </div>
 
                      <div class="form-row">
                       <div class="form-group col-md-4">
-                        <label for="gano" class="col-form-label">Victoria</label>
+                        <label for="gano" class="col-form-label">Victoria:</label>
                       <select 
                       name="gano"
                       class="custom-select" size="1" 
@@ -348,7 +348,7 @@
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="perdio" class="col-form-label">Derrota</label>
+                        <label for="perdio" class="col-form-label">Derrota:</label>
                         <select 
                         name="perdio"
                       class="custom-select" size="1" 
@@ -398,7 +398,7 @@
                       </div>
 
                       <div class="form-group col-md-4">
-                        <label for="empate" class="col-form-label">Empate</label>
+                        <label for="empate" class="col-form-label">Empate:</label>
                         <select 
                         name="empate"
                       class="custom-select" size="1" 
@@ -474,17 +474,17 @@
                   </div>
 
                       <div class="form-group">
-                        <label for="nombreProf" class="col-form-label">Nombre Completo</label>
+                        <label for="nombreProf" class="col-form-label">Nombre Completo:</label>
                         <input type="text" 
                         class="form-control" 
                         name="nombreProf" 
-                        placeholder="nombreProf"
+                        placeholder="Nombre Completo"
                         [(ngModel)]="this.dataApi.selectedAlumno.nombreProf">
                       </div>
   
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="edadProf" class="col-form-label">Edad</label>
+                        <label for="edadProf" class="col-form-label">Edad:</label>
                         <select 
                         name="edadProf"
                       class="custom-select" size="1" 
@@ -516,7 +516,7 @@
                       </div>
   
                       <div class="form-group col-md-6">
-                        <label for="sexoProf" class="col-form-label">Sexo</label>
+                        <label for="sexoProf" class="col-form-label">Sexo:</label>
                         <select 
                         class="form-control" 
                         name="sexoProf"
@@ -528,50 +528,51 @@
                      </div>
   
                       <div class="form-group">
-                        <label for="direccionProf" class="col-form-label">Direccion</label>
+                        <label for="direccionProf" class="col-form-label">Dirección:</label>
                         <input type="text" 
                         class="form-control" 
                         name="direccionProf" 
-                        placeholder="apodireccionProfo"
+                        placeholder="Dirección"
                         [(ngModel)]="this.dataApi.selectedAlumno.direccionProf">
                       </div>
   
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="enlaceProf" class="col-form-label">Enlace</label>
+                        <label for="enlaceProf" class="col-form-label">Enlace:</label>
                         <input type="text" 
                         class="form-control" 
                         name="enlaceProf" 
-                        placeholder="enlaceProf"
+                        placeholder="Enlace"
                         [(ngModel)]="this.dataApi.selectedAlumno.enlaceProf">
                       </div>
   
                       <div class="form-group col-md-6">
-                        <label for="telefonoProf" class="col-form-label">Celular</label>
+                        <label for="telefonoProf" class="col-form-label">Celular:</label>
                         <input type="text" 
                         class="form-control" 
                         name="telefonoProf" 
-                        placeholder="telefonoProf"
+                        placeholder="Celular"
                         [(ngModel)]="this.dataApi.selectedAlumno.telefonoProf">
                       </div>
                      </div>
 
                      <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="especialidadProf" class="col-form-label">Especialidad</label>
+                        <label for="especialidadProf" class="col-form-label">Especialidad:</label>
                         <input type="text" 
                         class="form-control" 
                         name="especialidadProf" 
-                        placeholder="especialidadProf"
+                        placeholder="Especialidad"
                         [(ngModel)]="this.dataApi.selectedAlumno.especialidadProf">
                       </div>
 
                       <div class="form-group col-md-6">
-                        <label for="gradoProf" class="col-form-label">Cinta</label>
+                        <label for="gradoProf" class="col-form-label">Cinta:</label>
                         <select 
                          name="gradoProf"
                          class="custom-select" size="1" 
                         [(ngModel)]="this.dataApi.selectedAlumno.gradoProf">
+                        <option value="Amarilla">Blanca</option>
                         <option value="Amarilla">Amarilla</option>
                         <option value="Naranja">Naranja</option>
                         <option value="Verde">Verde</option>
@@ -585,11 +586,11 @@
                      </div>
                      
                       <div class="form-group">
-                        <label for="academia" class="col-form-label">Nombre de la Academia</label>
+                        <label for="academia" class="col-form-label">Nombre de la Academia:</label>
                         <input type="text" 
                         class="form-control" 
                         name="academia" 
-                        placeholder="academia"
+                        placeholder="Academia"
                         [(ngModel)]="this.dataApi.selectedAlumno.academia">
                       </div>
 
@@ -599,29 +600,29 @@
                       <h4>Datos del Tutor</h4>
                       <hr>
                       </div>                      <div class="form-group">
-                        <label for="tutor" class="col-form-label">Nombre Completo</label>
+                        <label for="tutor" class="col-form-label">Nombre Completo:</label>
                         <input type="text" 
                         class="form-control" 
                         name="tutor" 
-                        placeholder="tutor"
+                        placeholder="Nombre Completo"
                         [(ngModel)]="this.dataApi.selectedAlumno.tutor">
                       </div>
 
                       <div class="form-group">
-                        <label for="direccionTutor" class="col-form-label">Dirección</label>
+                        <label for="direccionTutor" class="col-form-label">Dirección:</label>
                         <input type="text" 
                         class="form-control" 
                         name="direccionTutor" 
-                        placeholder="direccionTutor"
+                        placeholder="Dirección"
                         [(ngModel)]="this.dataApi.selectedAlumno.direccionTutor">
                       </div>
 
                       <div class="form-group">
-                        <label for="telefonoTutor" class="col-form-label">Celular</label>
+                        <label for="telefonoTutor" class="col-form-label">Celular:</label>
                         <input type="text" 
                         class="form-control" 
                         name="telefonoTutor" 
-                        placeholder="telefonoTutor"
+                        placeholder="Celular"
                         [(ngModel)]="this.dataApi.selectedAlumno.telefonoTutor">
                       </div>
 
