@@ -26,7 +26,9 @@
                   id="matricula"
                   name="matricula" 
                   placeholder="Matricula"
-                  [(ngModel)]="this.dataApi.selectedAlumno.matricula">
+                  [(ngModel)]="this.dataApi.selectedAlumno.matricula"
+                  required
+                minlength="6" maxlength="8">
                 </div>
 
             <div class="form-group">
@@ -35,7 +37,9 @@
                 class="form-control" 
                 name="nombreC" 
                 placeholder="Nombre Completo"
-                [(ngModel)]="this.dataApi.selectedAlumno.nombreC">
+                [(ngModel)]="this.dataApi.selectedAlumno.nombreC"
+                required
+                minlength="8" maxlength="30">
               </div>
               <div class="form-row">
                   <div class="form-group col-md-6">
@@ -219,7 +223,9 @@
                     class="form-control" 
                     name="direccion" 
                     placeholder="Dirección"
-                    [(ngModel)]="this.dataApi.selectedAlumno.direccion">
+                    [(ngModel)]="this.dataApi.selectedAlumno.direccion"
+                    required
+                minlength="8" maxlength="50">
                   </div>
                 
                 
@@ -232,7 +238,7 @@
                     name="cel" 
                     placeholder="Celular"
                     minlength="10"
-                    maxlength="10"
+                    maxlength="11"
                     required
                     [(ngModel)]="this.dataApi.selectedAlumno.cel">
                   </div>
@@ -243,7 +249,9 @@
                     class="form-control" 
                     name="apodo" 
                     placeholder="Apodo"
-                    [(ngModel)]="this.dataApi.selectedAlumno.apodo">
+                    [(ngModel)]="this.dataApi.selectedAlumno.apodo"
+                    required
+                minlength="8" maxlength="30">
                   </div>
                  </div>
 
@@ -272,7 +280,9 @@
                         class="form-control" 
                         name="peso" 
                         placeholder="0.0 kg"
-                        [(ngModel)]="this.dataApi.selectedAlumno.peso">
+                        [(ngModel)]="this.dataApi.selectedAlumno.peso"
+                        required
+                      minlength="1" maxlength="5">
                       </div>
                     </div>
 
@@ -283,7 +293,9 @@
                           class="form-control" 
                           name="salud" 
                           placeholder="Estado De Salud"
-                          [(ngModel)]="this.dataApi.selectedAlumno.salud">
+                          [(ngModel)]="this.dataApi.selectedAlumno.salud"
+                          required
+                        minlength="8" maxlength="50">
                         </div>
   
                         <div class="form-group col-md-6">
@@ -292,7 +304,9 @@
                           class="form-control" 
                           name="enlace" 
                           placeholder="Enlace"
-                          [(ngModel)]="this.dataApi.selectedAlumno.enlace">
+                          [(ngModel)]="this.dataApi.selectedAlumno.enlace"
+                          required
+                        minlength="8" maxlength="100">>
                         </div>
                       </div>
 
@@ -479,7 +493,9 @@
                         class="form-control" 
                         name="nombreProf" 
                         placeholder="Nombre Completo"
-                        [(ngModel)]="this.dataApi.selectedAlumno.nombreProf">
+                        [(ngModel)]="this.dataApi.selectedAlumno.nombreProf"
+                        required
+                      minlength="8" maxlength="50">
                       </div>
   
                      <div class="form-row">
@@ -533,7 +549,9 @@
                         class="form-control" 
                         name="direccionProf" 
                         placeholder="Dirección"
-                        [(ngModel)]="this.dataApi.selectedAlumno.direccionProf">
+                        [(ngModel)]="this.dataApi.selectedAlumno.direccionProf"
+                        required
+                      minlength="8" maxlength="50">
                       </div>
   
                      <div class="form-row">
@@ -543,7 +561,9 @@
                         class="form-control" 
                         name="enlaceProf" 
                         placeholder="Enlace"
-                        [(ngModel)]="this.dataApi.selectedAlumno.enlaceProf">
+                        [(ngModel)]="this.dataApi.selectedAlumno.enlaceProf"
+                        required
+                         minlength="8" maxlength="100">
                       </div>
   
                       <div class="form-group col-md-6">
@@ -552,7 +572,9 @@
                         class="form-control" 
                         name="telefonoProf" 
                         placeholder="Celular"
-                        [(ngModel)]="this.dataApi.selectedAlumno.telefonoProf">
+                        [(ngModel)]="this.dataApi.selectedAlumno.telefonoProf"
+                        required
+                      minlength="10" maxlength="11">
                       </div>
                      </div>
 
@@ -563,7 +585,9 @@
                         class="form-control" 
                         name="especialidadProf" 
                         placeholder="Especialidad"
-                        [(ngModel)]="this.dataApi.selectedAlumno.especialidadProf">
+                        [(ngModel)]="this.dataApi.selectedAlumno.especialidadProf"
+                        required
+                       minlength="5" maxlength="30">
                       </div>
 
                       <div class="form-group col-md-6">
@@ -591,7 +615,9 @@
                         class="form-control" 
                         name="academia" 
                         placeholder="Academia"
-                        [(ngModel)]="this.dataApi.selectedAlumno.academia">
+                        [(ngModel)]="this.dataApi.selectedAlumno.academia"
+                        required
+                        minlength="8" maxlength="30">
                       </div>
 
                       <!--Datos del Tutor -->
@@ -605,7 +631,9 @@
                         class="form-control" 
                         name="tutor" 
                         placeholder="Nombre Completo"
-                        [(ngModel)]="this.dataApi.selectedAlumno.tutor">
+                        [(ngModel)]="this.dataApi.selectedAlumno.tutor"
+                        required
+                        minlength="8" maxlength="50">>
                       </div>
 
                       <div class="form-group">
@@ -614,7 +642,9 @@
                         class="form-control" 
                         name="direccionTutor" 
                         placeholder="Dirección"
-                        [(ngModel)]="this.dataApi.selectedAlumno.direccionTutor">
+                        [(ngModel)]="this.dataApi.selectedAlumno.direccionTutor"
+                        required
+                        minlength="8" maxlength="50">>
                       </div>
 
                       <div class="form-group">
@@ -623,7 +653,9 @@
                         class="form-control" 
                         name="telefonoTutor" 
                         placeholder="Celular"
-                        [(ngModel)]="this.dataApi.selectedAlumno.telefonoTutor">
+                        [(ngModel)]="this.dataApi.selectedAlumno.telefonoTutor"
+                        required
+                        minlength="10" maxlength="11">>
                       </div>
 
 

@@ -6,8 +6,8 @@
 
   
 .subfondo{
-    line-height: 135px;
-    height: 135px;
+    line-height: 155px;
+    height: 155px;
     padding-top: 0;
     background-color: #222121;
 
@@ -44,7 +44,7 @@
   @media(min-width:268px) {}
       .intro-text {
         padding-top: 200px;
-        padding-bottom: 130px;
+        padding-bottom: 180px;
       }
         .intro-lead-in {
           font-size: 40px;
@@ -54,6 +54,7 @@
         }
       
        
+        
           
   
 
@@ -174,4 +175,7 @@
       img {
         width: 300px;
         height: 250px;
+      }
+      .portfolio-caption{
+        text-align: center;
       }
